@@ -63,7 +63,7 @@ h1 {
 input {
   border: 1px solid #9a9a9a;
   border-radius: 3px;
-  padding: 0.5rem 0.8rem;
+  padding: 0.6rem 0.8rem;
 }
 
 ::placeholder {
@@ -87,22 +87,17 @@ input {
   padding: 0 1rem;
 }
 
-.zipcode-container form {
-  margin: 1.5rem 0;
-  text-align: center;
-}
-
 .zipcode-container input,
 .zipcode-container button {
-  display: block;
-  margin: 1rem auto;
+  display: inline-block;
 }
 
 .button {
   background-color: #5cb85c;
-  border: none;
+  border: 1px solid #5cb85c;
   border-radius: 3px;
   color: #fff;
+  cursor: pointer;
   padding: 0.6rem 0.8rem;
 }
 /* End of Reusable Components */
@@ -110,11 +105,22 @@ input {
 
 /* Header */
 .header {
+  background-color: #fc6c43;
+  color: #fff;
   padding: 1rem 0;
+}
+
+.header .container-content {
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .header h1 {
   font-weight: 600;
+}
+
+.header input {
+  margin-right: 1rem;
 }
 /* End of Header */
 
@@ -130,5 +136,15 @@ input {
 .home-container h1 {
   color: #fff;
   font-weight: 100;
+}
+
+.home-container form {
+  margin: 1.5rem 0;
+}
+
+.home-container input,
+.home-container button {
+  display: block;
+  margin: 1rem auto;
 }
 /* End of Home Page */

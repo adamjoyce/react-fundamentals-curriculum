@@ -6,9 +6,10 @@ class App extends React.Component {
   render() {
     return (
       <div className="container">
-        <div className="container-content">
-          <div className="header">
-            <h1>Main.js Header</h1>
+        <div className="header">
+          <div className="container-content">
+            <h1>Weather App</h1>
+            <Zipcode />
           </div>
         </div>
         <div
