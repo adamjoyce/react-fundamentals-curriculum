@@ -1,26 +1,43 @@
 var React = require('react');
+var ReactRouter = require('react-router-dom');
+var Router = ReactRouter.BrowserRouter;
+var Route = ReactRouter.Route;
+var Link = ReactRouter.Link;
+var Switch = ReactRouter.Switch;
 
-var Zipcode = require('./Zipcode');
+var Header = require('./Header');
+var Home = require('./Home');
+var Forecast = require('./Forecast');
 
 class App extends React.Component {
   render() {
     return (
-      <div className="container">
-        <div className="header">
-          <div className="container-content">
-            <h1>Weather App</h1>
-            <Zipcode />
-          </div>
+      <Router>
+        <div className="container">
+          <Route
+            render={function(props) {
+              return <Header {...props} />;
+            }}
+          />
+          <Switch>
+            <Route
+              exact
+              path="/"
+              render={function(props) {
+                return <Home {...props} />;
+              }}
+            />
+            <Route path="/forecast" component={Forecast} />
+            <Route render={function() {
+              return (
+                <div className="container-content">
+                  <p>Page not found</p>
+                </div>
+              );
+            }} />
+          </Switch>
         </div>
-        <div
-          className="home-container"
-          style={{backgroundImage: "url('app/images/pattern.svg')"}}>
-          <div className="container-content">
-            <h1>Enter a City and State</h1>
-            <Zipcode />
-          </div>
-        </div>
-      </div>
+      </Router>
     );
   }
 }

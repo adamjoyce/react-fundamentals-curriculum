@@ -14,8 +14,14 @@ class Zipcode extends React.Component {
   }
 
   handleSubmit() {
-    api.getCurrentWeather(this.state.zipcode).then(function(response) {
-      console.log(response);
+    // api.getCurrentWeather(this.state.zipcode).then(function(response) {
+    //   console.log(response);
+    // });
+    this.props.onSubmitZipcode(this.state.zipcode);
+    this.setState(function() {
+      return {
+        zipcode: ''
+      }
     });
   }
 
@@ -51,6 +57,7 @@ class Zipcode extends React.Component {
 }
 
 Zipcode.propTypes = {
+  onSubmitZipcode: PropTypes.func.isRequired
 }
 
 module.exports = Zipcode;
