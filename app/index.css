@@ -172,6 +172,11 @@ a {
   text-align: center;
 }
 
+.day-container {
+  margin: 2rem 0;
+  text-align: center;
+}
+
 .weather {
   height: 7rem;
 }
@@ -183,3 +188,14 @@ a {
   margin: 1rem 0;
 }
 /* End of Forecast Page */
+
+
+/* Details Page */
+.description-container {
+  font-size: 1.5rem;
+  font-weight: 100;
+  margin: 0 auto;
+  max-width: 25rem;
+  text-align: center;
+}
+/* End of Details Page */
