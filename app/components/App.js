@@ -8,6 +8,7 @@ var Switch = ReactRouter.Switch;
 var Header = require('./Header');
 var Home = require('./Home');
 var Forecast = require('./Forecast');
+var Detail = require('./Detail');
 
 class App extends React.Component {
   render() {
@@ -28,6 +29,7 @@ class App extends React.Component {
               }}
             />
             <Route path="/forecast" component={Forecast} />
+            <Route path="/detail/:city" component={Detail} />
             <Route render={function() {
               return (
                 <div className="container-content">

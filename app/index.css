@@ -153,3 +153,33 @@ a {
   margin: 1rem auto;
 }
 /* End of Home Page */
+
+
+/* Forecast Page */
+.forecast-header {
+  color: #333;
+  font-weight: 100;
+  font-size: 3.5rem;
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.forecast-container {
+  display: grid;
+  grid-row-gap: 2rem;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.weather {
+  height: 7rem;
+}
+
+.subheader {
+  color: #333;
+  font-size: 1.3rem;
+  font-weight: 100;
+  margin: 1rem 0;
+}
+/* End of Forecast Page */

@@ -18,8 +18,7 @@ function getQueryStringData(city) {
   return {
     q: city,
     type: 'accurate',
-    APPID: apiKey,
-    cnt: 5
+    APPID: apiKey
   };
 }
 
